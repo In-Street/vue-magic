@@ -8,7 +8,9 @@ export default defineConfig({
   //端口修改
   server: {
     port: 7070,
-    host: "0.0.0.0"
+    host: "0.0.0.0",
+    proxy:{
+
+    }
   }
 })
-
