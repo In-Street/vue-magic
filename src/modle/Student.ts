@@ -20,6 +20,8 @@ export interface StudentQuery{
     name ?: string,
     gender ?: number,
     age ?: number[],
+    ageMin ?: number,
+    ageMax ?: number,
     pageNum: number,
     pageSize: number
 }
