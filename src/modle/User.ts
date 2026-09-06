@@ -22,3 +22,8 @@ export interface UserInfo {
         medium: string
     }
 }
+
+export interface AxiosStringResult extends AxiosResponse{
+    code:number,
+    msg:string
+}

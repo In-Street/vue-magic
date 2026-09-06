@@ -1,9 +1,22 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
+import Components from 'unplugin-vue-components/vite';
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
+
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue(),
+    Components({
+      resolvers: [
+        AntDesignVueResolver({
+          // resolveIcons: true   // 如果要自动注册图标组件 <AIcon />，开这个
+          importStyle: false,
+        })
+      ],
+      dts: 'src/components.d.ts'   // 生成 components 类型声明，关键！
+    })
+  ],
 
   //端口修改。 选项参考：https://vitejs.cn/config/server-options
   server: {

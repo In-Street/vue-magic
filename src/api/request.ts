@@ -43,9 +43,9 @@ _axios.interceptors.response.use(
     //响应出错时的处理,当响应状态码 大于2xx。 为了避免在业务代码里每个请求都添加try catch处理，在此处统一处理
     (error) => {
         console.log(error) // 异常处理
-        if (error.response.status === 400) {
+        /* if (error.response.status === 400) {
             //
-        }
+        } */
 
         return Promise.resolve({}) // 发生异常时，返回一个空对象。 在业务代码中获取结果数据时data不一定存在，所以使用 response.data?.data
     },

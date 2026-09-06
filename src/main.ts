@@ -5,7 +5,7 @@ import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/reset.css';
 
 // import App from './App.vue'
-import E1 from './views/进阶/antdv/2-分页.vue'
+import E1 from './views/进阶/antdv/5删除操作.vue'
 // createApp(App).mount('#app')
 
 const app = createApp(E1)
